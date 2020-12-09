@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerFire.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\ProjectileMovement.cs" />
     <Compile Include="Assets\Scripts\ScreenBoundManager.cs" />
     <Compile Include="Assets\Scripts\Shape.cs" />
     <Reference Include="UnityEngine">

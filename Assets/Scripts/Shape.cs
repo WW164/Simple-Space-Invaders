@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shape : MonoBehaviour
 {
+    public Vector3 screenBounds;
+
     protected float halfHeight;
     protected float halfWidth;
 
@@ -16,6 +18,8 @@ public class Shape : MonoBehaviour
 
         halfHeight = spriteRenderer.bounds.extents.x;
         halfWidth = spriteRenderer.bounds.extents.y;
+
+        screenBounds = GetScreenBounds();
     }
 
     public void SetColor(Color newColor)
@@ -27,5 +31,13 @@ public class Shape : MonoBehaviour
     {
         Color newColor = new Color(red, green, blue);
         spriteRenderer.color = newColor;
+    }
+
+    private Vector3 GetScreenBounds()
+    {
+        Camera mainCamera = Camera.main;
+        Vector3 screenVector = new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z);
+
+        return mainCamera.ScreenToWorldPoint(screenVector);
     }
 }

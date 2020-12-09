@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : Shape
 {
-    public ScreenBoundManager screenBoundManager;
     public float playerSpeed;
 
     // Start is called before the first frame update
@@ -12,7 +11,6 @@ public class PlayerMovement : Shape
     {
         base.Start();
 
-        screenBoundManager = FindObjectOfType<ScreenBoundManager>();
         playerSpeed = 0.1f;
         SetColor(Color.yellow);   
     }
@@ -32,7 +30,7 @@ public class PlayerMovement : Shape
             horizontalMovement += horizontalMovement * Time.deltaTime * playerSpeed;
             horizontalMovement += transform.position.x;
 
-            float right = screenBoundManager.screenBounds.x;
+            float right = screenBounds.x;
             float left = -right;
 
             float limit =
