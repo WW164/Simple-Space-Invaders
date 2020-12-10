@@ -64,8 +64,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EnemyDestroyed.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemySpawn.cs" />
+    <Compile Include="Assets\Scripts\HUDPauseButton.cs" />
+    <Compile Include="Assets\Scripts\HUDScoreController.cs" />
     <Compile Include="Assets\Scripts\PlayerFire.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ProjectileMovement.cs" />
@@ -681,7 +684,16 @@
       <HintPath>H:/Git Projects/Space Invaders with SO/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ScriptableObject-Architecture.Editor.csproj">
+      <Project>{857BA26C-25C2-49D8-F67F-91D28D801EA6}</Project>
+      <Name>ScriptableObject-Architecture.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="ScriptableObject-Architecture.csproj">
+      <Project>{EBCAE822-0AF6-5BE3-525C-82996BE445E6}</Project>
+      <Name>ScriptableObject-Architecture</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,12 +14,6 @@ public class EnemySpawn : MonoBehaviour
         StartCoroutine(SpawnEnemies());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private IEnumerator SpawnEnemies ()
     {
         for(int i = 0; i < 100; i++)

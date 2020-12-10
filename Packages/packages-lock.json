@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.danieleverland.scriptableobjectarchitecture": {
+      "version": "file:H:/Trainee tutorails/SO Architecture tutorials/ScriptableObject-Architecture-master/ScriptableObject-Architecture-master/Assets/SO Architecture",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "3.2.5",
       "depth": 0,
